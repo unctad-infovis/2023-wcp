@@ -1,0 +1,84 @@
+//@import url('https://fonts.googleapis.com/css?family=Roboto+Serif:600.css');
+
+@import 'colors.less';
+
+#app-root-2023-wcp .app {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto auto;
+  max-width: 1350px;
+  width: 100%;
+  h2 {
+    background-color: @unblue;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    padding: 20px 10px;
+  }
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto auto;
+    max-width: 900px;
+    .indicator_container {
+      box-sizing: border-box;
+      flex: 50%;
+      margin-bottom: 20px;
+      &:nth-child(2n) {
+        padding-left: 20px;
+      }
+      &:nth-child(2n - 1) {
+        padding-right: 20px;
+      }
+      h3 {
+        border-bottom: 1px solid rgba(170, 160, 150, 0.5);
+        color: #000;
+        font-size: 22px;
+        font-weight: 600;
+        margin: auto auto 20px auto;
+        padding: 5px 0;
+      }
+      .indicator_list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          margin-bottom: 10px;
+          &:after {
+            padding-bottom: 10px;
+            border-bottom: 1px dashed rgba(170, 160, 150, 0.8);
+            opacity: 0.5;
+            content: '';
+            height: 1px;
+            width: 50%;
+            display: block;
+          }
+          &:last-child {
+            &:after {
+              display: none;
+            }
+          }
+          .value {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            .number {
+              background-color: @unblue;
+              border-radius: 20px;
+              color: #fff;
+              display: inline-block;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              width: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@import 'basics.less';
