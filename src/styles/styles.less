@@ -7,15 +7,6 @@
   margin: 40px auto;
   max-width: 1350px;
   width: 100%;
-  h3 {
-    background-color: @unblue;
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
-    font-weight: 600;
-    margin: 0 0 20px 0;
-    padding: 20px 10px;
-  }
   .container {
     display: flex;
     flex-flow: row wrap;
@@ -36,8 +27,16 @@
         color: #000;
         font-size: 22px;
         font-weight: 600;
+        line-height: 22px;
         margin: auto auto 20px auto;
         padding: 5px 0;
+        .respondents {
+          float: right;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 26px;
+          text-align: right;
+        }
       }
       p {
         max-width: 650px;
@@ -50,23 +49,42 @@
         padding: 0;
         li {
           align-items: center;
+          box-sizing: border-box;
           flex: 50%;
           font-weight: 600;
           margin-bottom: 10px;
+          padding: 0 10px;
+          position: relative;
           text-align: center;
+          svg {
+            height: 64px;
+            left: calc(50% - 32px);
+            position: absolute;
+            width: 64px;
+            .animate {
+              animation: progress 3s ease-out forwards;
+            }
+            @keyframes progress {
+              0% {
+                stroke-dasharray: 0 100;
+              }
+            }
+          }
           .value {
             display: block;
-            font-size: 20px;
+            font-size: 26px;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             .number {
-              border-radius: 20px;
+              border-radius: 25px;
               color: #fff;
               display: inline-block;
-              height: 40px;
-              line-height: 40px;
+              height: 50px;
+              line-height: 50px;
               text-align: center;
-              width: 40px;
+              width: 50px;
+              margin-top: 7px;
+              position: relative;
               &.high {
                 background-color: @unblue;
               }
