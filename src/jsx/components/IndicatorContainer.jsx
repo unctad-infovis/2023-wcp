@@ -14,17 +14,18 @@ function IndicatorContainer({
   enforcement_powers,
   policy_making_powers,
   text,
-  title
+  title,
+  titles
 }) {
   return (
     <div className="indicator_container">
       <h4>{title}</h4>
       <ul className="indicator_list">
-        <IndicatorList value={consumer_protection_law} text="Countries with consumer protection law on Sustainable consumption" />
-        <IndicatorList value={policy_making_powers} text="Countries with policy making powers on Sustainable consumption" />
-        <IndicatorList value={enforcement_powers} text="Countries with enforcement powers on Sustainable consumption" />
-        <IndicatorList value={cooperation_agreements} text="Countries having cooperation agreements on sustainable consumption" />
-        <IndicatorList value={education_initiatives} text="Countries having education initiatives on Sustainable consumption" />
+        <IndicatorList value={consumer_protection_law} text={titles[0]} />
+        <IndicatorList value={policy_making_powers} text={titles[1]} />
+        <IndicatorList value={enforcement_powers} text={titles[2]} />
+        <IndicatorList value={cooperation_agreements} text={titles[3]} />
+        <IndicatorList value={education_initiatives} text={titles[4]} />
       </ul>
       {text && text.map((paragraph) => <ReactMarkdown>{paragraph}</ReactMarkdown>)}
     </div>
@@ -38,7 +39,8 @@ IndicatorContainer.propTypes = {
   enforcement_powers: PropTypes.number.isRequired,
   policy_making_powers: PropTypes.number.isRequired,
   text: PropTypes.instanceOf(Array).isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  titles: PropTypes.instanceOf(Array).isRequired,
 };
 
 IndicatorContainer.defaultProps = {
