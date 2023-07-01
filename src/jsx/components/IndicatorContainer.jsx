@@ -20,11 +20,11 @@ function IndicatorContainer({
     <div className="indicator_container">
       <h4>{title}</h4>
       <ul className="indicator_list">
-        <IndicatorList value={consumer_protection_law} text="countries with consumer protection law" respondents={108} />
-        <IndicatorList value={policy_making_powers} text="countries with policy making powers" respondents={108} />
-        <IndicatorList value={enforcement_powers} text="countries with enforcement powers" respondents={108} />
-        <IndicatorList value={cooperation_agreements} text="countries with cooperation agreements" respondents={108} />
-        <IndicatorList value={education_initiatives} text="countries with education initiatives" respondents={108} />
+        <IndicatorList value={consumer_protection_law} text="Countries with consumer protection law on Sustainable consumption" />
+        <IndicatorList value={policy_making_powers} text="Countries with policy making powers on Sustainable consumption" />
+        <IndicatorList value={enforcement_powers} text="Countries with enforcement powers on Sustainable consumption" />
+        <IndicatorList value={cooperation_agreements} text="Countries having cooperation agreements on sustainable consumption" />
+        <IndicatorList value={education_initiatives} text="Countries having education initiatives on Sustainable consumption" />
       </ul>
       {text && text.map((paragraph) => <ReactMarkdown>{paragraph}</ReactMarkdown>)}
     </div>
