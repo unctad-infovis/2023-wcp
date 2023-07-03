@@ -25,19 +25,22 @@ function IndicatorContainer({
         <IndicatorList value={policy_making_powers} text={titles[1]} />
         <IndicatorList value={enforcement_powers} text={titles[2]} />
         <IndicatorList value={cooperation_agreements} text={titles[3]} />
-        <IndicatorList value={education_initiatives} text={titles[4]} />
+        {education_initiatives && <IndicatorList value={education_initiatives} text={titles[4]} />}
       </ul>
-      {text && text.map((paragraph) => <ReactMarkdown>{paragraph}</ReactMarkdown>)}
+      {text && text.map((paragraph) => <ReactMarkdown key={paragraph}>{paragraph}</ReactMarkdown>)}
     </div>
   );
 }
 
 IndicatorContainer.propTypes = {
-  consumer_protection_law: PropTypes.number.isRequired,
-  cooperation_agreements: PropTypes.number.isRequired,
-  education_initiatives: PropTypes.number.isRequired,
-  enforcement_powers: PropTypes.number.isRequired,
-  policy_making_powers: PropTypes.number.isRequired,
+  consumer_protection_law: PropTypes.instanceOf(Array).isRequired,
+  cooperation_agreements: PropTypes.instanceOf(Array).isRequired,
+  policy_making_powers: PropTypes.instanceOf(Array).isRequired,
+  enforcement_powers: PropTypes.instanceOf(Array).isRequired,
+  education_initiatives: PropTypes.oneOfType([
+    PropTypes.instanceOf(Array),
+    PropTypes.bool
+  ]).isRequired,
   text: PropTypes.instanceOf(Array).isRequired,
   title: PropTypes.string.isRequired,
   titles: PropTypes.instanceOf(Array).isRequired,
