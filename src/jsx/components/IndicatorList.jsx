@@ -10,22 +10,20 @@ function IndicatorList({
   value
 }) {
   return (
-    <div className="indicator_container">
-      <li>
-        <IsVisible once>
-          {(isVisible) => (
-            <svg viewBox="0 0 36 36">
-              <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#72bf44" strokeWidth="4" strokeDasharray={`${(value[0] / value[1]) * 100}, 100`} className={`${(isVisible) ? 'animate' : ''}`} />
-            </svg>
-          )}
-        </IsVisible>
-        <span className="value">
-          <span className={`number ${(value[0]) > 50 ? 'high' : ((value[0]) > 30) ? 'medium' : 'low'}`}>{value[0]}</span>
-        </span>
-        {' '}
-        {text}
-      </li>
-    </div>
+    <li>
+      <IsVisible once>
+        {(isVisible) => (
+          <svg viewBox="0 0 36 36">
+            <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#72bf44" strokeWidth="4" strokeDasharray={`${(value[0] / value[1]) * 100}, 100`} className={`${(isVisible) ? 'animate' : ''}`} />
+          </svg>
+        )}
+      </IsVisible>
+      <span className="value">
+        <span className={`number ${(value[0]) > 50 ? 'high' : ((value[0]) > 30) ? 'medium' : 'low'}`}>{value[0]}</span>
+      </span>
+      {' '}
+      {text}
+    </li>
   );
 }
 
