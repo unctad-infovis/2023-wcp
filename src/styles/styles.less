@@ -2,7 +2,14 @@
 
 @import 'colors.less';
 
-#app-root-2023-wcp .app {
+#app-root-2023-wcp_productsafety,
+#app-root-2023-wcp_ecommerce {
+  &.app-root-2023-wcp .app {
+    margin: 20px auto 0 auto;
+  }
+}
+
+.app-root-2023-wcp .app {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 40px auto;
   max-width: 1350px;
@@ -15,8 +22,8 @@
     .indicator_container {
       box-sizing: border-box;
       flex: 100%;
-      min-width: 120px;
       margin-bottom: 20px;
+      min-width: 120px;
       // &:nth-child(2n) {
       //   padding-left: 20px;
       // }
@@ -54,10 +61,10 @@
           align-items: center;
           box-sizing: border-box;
           flex: 1 1 120px;
-          max-width: 120px;
           font-size: 14px;
           font-weight: 600;
           margin-bottom: 10px;
+          max-width: 120px;
           padding: 0 10px;
           position: relative;
           text-align: center;
@@ -86,10 +93,10 @@
               display: inline-block;
               height: 50px;
               line-height: 50px;
-              text-align: center;
-              width: 50px;
               margin-top: 7px;
               position: relative;
+              text-align: center;
+              width: 50px;
               &.high {
                 background-color: @unblue;
               }
