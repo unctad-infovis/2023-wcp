@@ -13,6 +13,7 @@ Contact Teemo Tebest.
     * Keep the heading row
   * Download the file and convert the `.csv` file to `.json` and update the 2022-wcp project so the flags-animation gets updated. Use [Mr Data Converter](https://shancarter.github.io/mr-data-converter/)
     * Use `JSON - properties`
+    * Fix Maldivas
 * Copy paste to replace all the charts in Datawrapper
   * Datawrapper data is in [Google Drive](https://docs.google.com/spreadsheets/d/1tenPbzTOAlwrUZwRnvOdG5MV3LzK7ecsGmMpOHWW8RM/edit?gid=743131870#gid=743131870) and the charts in [Datawrapper](https://app.datawrapper.de/archive/team/unctad/173122)
   * Remember to update the legend in the maps
